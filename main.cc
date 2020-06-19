@@ -51,7 +51,7 @@ namespace std {
 }
 
 int main() {
-  Bloomfilter<event> filter;
+  Bloomfilter<event> filter(3, 2048, 0);
 
   event a;
   a.pc = 1023874;

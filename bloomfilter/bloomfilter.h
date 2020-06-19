@@ -47,10 +47,13 @@ class Bloomfilter {
 protected:
 
 public:
-  Bloomfilter(unsigned int n = 3, unsigned int size = 2048, unsigned int seed = 0);
+  Bloomfilter(unsigned int n = 0, unsigned int size = 0, unsigned int seed = 0);
 
   bool find(const T obj) const;
+
   void insert(const T obj);
+
+  void resize(unsigned int n = 0, unsigned int size = 0, unsigned int seed = 0);
 
   void clear();
 };

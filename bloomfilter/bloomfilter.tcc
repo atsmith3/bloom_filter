@@ -47,7 +47,7 @@ Bloomfilter<T>::Bloomfilter(unsigned int n, unsigned int size, unsigned int seed
  */
 template<class T>
 bool Bloomfilter<T>::find(const T obj) const {
-  if(table.size() == 0) {
+  if(table.size() == 0 || offset.size() == 0) {
     return false;
   }
   bool retval = true;
